@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Fastlane uploading to Open Test
         env:
-          GOOGLE_PLAY_JSON_KEY: ${{ secrets.GOOGLE_PLAY_JSON_KEY }}
+          GOOGLE_PLAY_JSON_KEYS: ${{ secrets.GOOGLE_PLAY_JSON_KEYS }}
         run: |
-          export GOOGLE_PLAY_JSON_KEY="$(echo "$GOOGLE_PLAY_JSON_KEY")"
+          export GOOGLE_PLAY_JSON_KEYS="$(echo "$GOOGLE_PLAY_JSON_KEYS")"
           fastlane android upload_to_open
